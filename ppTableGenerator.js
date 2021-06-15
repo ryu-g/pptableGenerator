@@ -1,7 +1,7 @@
 const W = 6
 const H = 12
-const KIND_OF_PANEL = 5
-const RANGE_OF_MESH = 6
+const KIND_OF_PANEL = 5 //パネルの色数
+const RANGE_OF_MESH = 6 //上部6列分は同じパネルが隣り合わない
 
 const getRandomInt = (max) =>{
   return Math.floor(Math.random() * max);

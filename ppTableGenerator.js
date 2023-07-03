@@ -11,15 +11,15 @@ const lineFormat = (hoge) => {
   for(let i= 0; i <hoge.length ; i++){
     hoge[i] = getRandomInt(5)
     while(i > 0 && hoge[i-1] == hoge[i]){
-        hoge[i] = getRandomInt(KIND_OF_PANEL)
+      hoge[i] = getRandomInt(KIND_OF_PANEL)
     }
   }
   const formatted = hoge
   return formatted
 }
 
-const generatePanelLine = () =>{
-  let  lineData = new Array(6).fill(0)
+const generatePanelLine = () => {
+  let lineData = new Array(6).fill(0)
   lineData = lineFormat(lineData)
   const line = lineData
   return line
@@ -61,10 +61,9 @@ const generatePaneponTable = () => {
   let table = []
   const initialLine = generatePanelLine()
   table.push(initialLine)
-  for(let i = 0 ; i<H-1; i++){
+  for(let i = 0 ; i < H-1; i++){
     table = addPanelLine(table, i)
   }
-  
   return table
 }
 
